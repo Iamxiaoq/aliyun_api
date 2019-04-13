@@ -1,0 +1,352 @@
+{
+	"info": {
+		"_postman_id": "d22ff5ee-f157-4d38-840b-66b4a90607e6",
+		"name": "aliyun",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "bss",
+			"item": [
+				{
+					"name": "QueryInstanceBill",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "c17e04f1-bc8a-47f2-9492-ab1e492fcb55",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://business.aliyuncs.com?Action=QueryInstanceBill&BillingCycle=2019-03&ProductCode=ecs&Format=JSON&Version=2017-12-14&AccessKeyId={{AccessKeyId}}&SignatureMethod=HMAC-SHA1&Timestamp={{Timestamp}}&SignatureVersion=1.0&SignatureNonce={{SignatureNonce}}&Signature={{Signature}}&PageSize=25&PageNum=4&SubscriptionType=Subscription",
+							"protocol": "http",
+							"host": [
+								"business",
+								"aliyuncs",
+								"com"
+							],
+							"query": [
+								{
+									"key": "Action",
+									"value": "QueryInstanceBill"
+								},
+								{
+									"key": "BillingCycle",
+									"value": "2019-03"
+								},
+								{
+									"key": "ProductCode",
+									"value": "ecs"
+								},
+								{
+									"key": "Format",
+									"value": "JSON"
+								},
+								{
+									"key": "Version",
+									"value": "2017-12-14"
+								},
+								{
+									"key": "AccessKeyId",
+									"value": "{{AccessKeyId}}"
+								},
+								{
+									"key": "SignatureMethod",
+									"value": "HMAC-SHA1"
+								},
+								{
+									"key": "Timestamp",
+									"value": "{{Timestamp}}"
+								},
+								{
+									"key": "SignatureVersion",
+									"value": "1.0"
+								},
+								{
+									"key": "SignatureNonce",
+									"value": "{{SignatureNonce}}"
+								},
+								{
+									"key": "Signature",
+									"value": "{{Signature}}"
+								},
+								{
+									"key": "PageSize",
+									"value": "25"
+								},
+								{
+									"key": "PageNum",
+									"value": "4"
+								},
+								{
+									"key": "SubscriptionType",
+									"value": "Subscription"
+								}
+							]
+						},
+						"description": "实例账单查询服务 查询用户某个账期内所有商品实例的消费汇总信息"
+					},
+					"response": []
+				},
+				{
+					"name": "QueryBillOverview",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "c17e04f1-bc8a-47f2-9492-ab1e492fcb55",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://business.aliyuncs.com?Action=QueryBillOverview&BillingCycle=2019-02&Format=JSON&Version=2017-12-14&AccessKeyId={{AccessKeyId}}&SignatureMethod=HMAC-SHA1&Timestamp={{Timestamp}}&SignatureVersion=1.0&SignatureNonce={{SignatureNonce}}&Signature={{Signature}}",
+							"protocol": "http",
+							"host": [
+								"business",
+								"aliyuncs",
+								"com"
+							],
+							"query": [
+								{
+									"key": "Action",
+									"value": "QueryBillOverview"
+								},
+								{
+									"key": "BillingCycle",
+									"value": "2019-02"
+								},
+								{
+									"key": "Format",
+									"value": "JSON"
+								},
+								{
+									"key": "Version",
+									"value": "2017-12-14"
+								},
+								{
+									"key": "AccessKeyId",
+									"value": "{{AccessKeyId}}"
+								},
+								{
+									"key": "SignatureMethod",
+									"value": "HMAC-SHA1"
+								},
+								{
+									"key": "Timestamp",
+									"value": "{{Timestamp}}"
+								},
+								{
+									"key": "SignatureVersion",
+									"value": "1.0"
+								},
+								{
+									"key": "SignatureNonce",
+									"value": "{{SignatureNonce}}"
+								},
+								{
+									"key": "Signature",
+									"value": "{{Signature}}"
+								}
+							]
+						},
+						"description": "账单总览查询服务 查询用户某个账期内账单总览信息"
+					},
+					"response": []
+				}
+			],
+			"description": "账单\nhttps://help.aliyun.com/document_detail/87968.html",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "ed13bc69-7660-4025-83f9-ebcc5f6fb4fa",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "84432eaa-1ca1-4329-a28b-3daf608182cd",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "ecs",
+			"item": [
+				{
+					"name": "DescribeInstances",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "c17e04f1-bc8a-47f2-9492-ab1e492fcb55",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://ecs.aliyuncs.com?Action=DescribeInstances&RegionId=cn-zhangjiakou&Format=JSON&Version=2014-05-26&AccessKeyId={{AccessKeyId}}&SignatureMethod=HMAC-SHA1&Timestamp={{Timestamp}}&SignatureVersion=1.0&SignatureNonce={{SignatureNonce}}&Signature={{Signature}}",
+							"protocol": "http",
+							"host": [
+								"ecs",
+								"aliyuncs",
+								"com"
+							],
+							"query": [
+								{
+									"key": "Action",
+									"value": "DescribeInstances"
+								},
+								{
+									"key": "RegionId",
+									"value": "cn-zhangjiakou"
+								},
+								{
+									"key": "Format",
+									"value": "JSON"
+								},
+								{
+									"key": "Version",
+									"value": "2014-05-26"
+								},
+								{
+									"key": "AccessKeyId",
+									"value": "{{AccessKeyId}}"
+								},
+								{
+									"key": "SignatureMethod",
+									"value": "HMAC-SHA1"
+								},
+								{
+									"key": "Timestamp",
+									"value": "{{Timestamp}}"
+								},
+								{
+									"key": "SignatureVersion",
+									"value": "1.0"
+								},
+								{
+									"key": "SignatureNonce",
+									"value": "{{SignatureNonce}}"
+								},
+								{
+									"key": "Signature",
+									"value": "{{Signature}}"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "f243c70a-bb41-4c4e-8f08-b20af783902b",
+				"type": "text/javascript",
+				"exec": [
+					"const secretKey = '' + '&';",
+					"const accesskeyId = ''",
+					"",
+					"",
+					"function get_qs_arr(){",
+					"    const url = request.url;",
+					"    const qs = url.substring(url.indexOf('?') + 1);",
+					"    let qs_arr = qs.split('&')",
+					"    qs_arr = qs_arr.filter(qs => qs.indexOf('{{') ==-1 );",
+					"    return qs_arr;",
+					"}",
+					"",
+					"",
+					"function get_str2sign(qs_arr, ts, nonce){",
+					"    qs_arr.push(`Timestamp=${ts}`);",
+					"    qs_arr.push(`SignatureNonce=${nonce}`);",
+					"    qs_arr.push(`AccessKeyId=${accesskeyId}`);",
+					"    qs_arr.sort();",
+					"    qs_arr = Array.from(qs_arr, qs => `${qs.split('=')[0]}=${encodeURIComponent(qs.split('=')[1])}`);",
+					"    const qs = qs_arr.join('&');",
+					"    const qs2sign = `${request.method}&${encodeURIComponent('/')}&${encodeURIComponent(qs)}`;",
+					"    return qs2sign;",
+					"}",
+					"",
+					"",
+					"function calc_sign(str2sign){",
+					"    const key = CryptoJS.enc.Utf8.parse(secretKey);",
+					"    const byte = CryptoJS.enc.Utf8.parse(str2sign);",
+					"    const signatureBytes = CryptoJS.HmacSHA1(byte, key);",
+					"    return CryptoJS.enc.Base64.stringify(signatureBytes);",
+					"}",
+					"",
+					"",
+					"const qs_arr = get_qs_arr();",
+					"const nonce = Math.random();",
+					"const ts = new Date().toISOString().split('.')[0]+\"Z\";",
+					"",
+					"const str2sign = get_str2sign(qs_arr, ts, nonce);",
+					"const signature = calc_sign(str2sign);",
+					"console.log(str2sign, signature);",
+					"",
+					"postman.setEnvironmentVariable('AccessKeyId', accesskeyId);",
+					"postman.setEnvironmentVariable('Timestamp', ts);",
+					"postman.setEnvironmentVariable('SignatureNonce', nonce);",
+					"postman.setEnvironmentVariable('Signature', signature);",
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "2fab58ed-013f-4bb2-a8ab-100db24f4fc8",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
